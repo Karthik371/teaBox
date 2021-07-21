@@ -1,0 +1,36 @@
+/** @format */
+
+.cart-container {
+  width: 100%;
+  height: 60vh;
+}
+.cart-contents {
+  padding: 0 18%;
+  height: 100%;
+  margin: 0 auto;
+}
+.cart-body {
+  width: 100%;
+  border-bottom: 2px solid red;
+}
+.cart-box {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .cart-item {
+    margin: 0.2rem 0.8rem;
+    h6 {
+      font-size: 1.5rem;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600 !important;
+      color: rgb(155, 155, 155);
+    }
+    span {
+      display: block;
+      width: 80%;
+      font-size: 0.9rem;
+    }
+  }
+}

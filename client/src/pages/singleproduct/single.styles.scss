@@ -1,0 +1,156 @@
+/** @format */
+
+.single-container {
+  width: 100%;
+  height: 80vh;
+  background-color: rgb(243, 247, 248);
+}
+
+.single-contents {
+  width: 100%;
+  height: 100%;
+}
+.single-body-flex {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.single-left {
+  width: 320px;
+  height: 360px;
+
+  .single-left-text {
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+  }
+  .single-left-img {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.single-right {
+  margin-left: 0rem;
+  width: 500px;
+
+  position: relative;
+  .fav-icon {
+    position: absolute;
+    right: 0;
+    top: 2.5rem;
+    stroke: rgba(0, 0, 0, 0.541);
+    fill: rgba(0, 0, 0, 0);
+    transition: all 0.25s ease;
+    transform-origin: bottom;
+    cursor: pointer;
+    &:hover {
+      transform-origin: top;
+      fill: rgb(240, 14, 14);
+    }
+  }
+  .single-right-text {
+    position: relative;
+    top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h2 {
+      font-family: "Parisienne", cursive;
+      margin-top: 0;
+      color: rgb(107, 178, 37);
+      font-size: 3rem;
+      margin-bottom: 0.2rem;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 0.95rem;
+      margin-top: 0;
+      color: rgb(145, 172, 124);
+    }
+    p:nth-child(3) {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin: 0.45rem 0;
+      color: black;
+    }
+    span {
+      font-family: "Poppins", sans-serif;
+      background-color: rgb(107, 178, 37);
+      padding: 0.35rem 1.5rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.4rem;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+    button {
+      font-family: "Poppins", sans-serif;
+      padding: 0.35rem 0.65rem;
+      border: 2px solid black;
+      outline: 0;
+      background: transparent;
+      margin: 0.4rem 0;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 10;
+      transition: all 0.35s ease-in-out;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      .single-bag-icon {
+        margin-right: 0.5rem;
+      }
+      &::after {
+        z-index: -1;
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(221, 75, 49, 0.938);
+        transition: all 0.35s ease-in-out;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      }
+      &:hover {
+        color: white;
+      }
+      &:hover::after {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+  }
+}
